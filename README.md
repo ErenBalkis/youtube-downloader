@@ -113,9 +113,3 @@ If ffmpeg is not found, the app displays a warning with a download link.
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
-
-<div align="center">
-Built with ❤️ using Streamlit & yt-dlp
-</div>
