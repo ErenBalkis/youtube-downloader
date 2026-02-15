@@ -30,7 +30,7 @@ Download YouTube videos in MP4 or extract audio as MP3 — all from your browser
 ## 📸 Screenshot
 
 <div align="center">
-<img src="assets/screenshot.png" alt="YouTube Downloader Screenshot" width="700"/>
+<img src="screenshots/screenshot1.png" alt="YouTube Downloader Screenshot" width="700"/>
 </div>
 
 ---
