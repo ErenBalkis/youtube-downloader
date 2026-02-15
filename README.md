@@ -24,40 +24,30 @@ Download YouTube videos in MP4 or extract audio as MP3 — all from your browser
 | 📊 **Progress Bar** | Real-time download progress tracking |
 | 🛡️ **Error Handling** | Friendly messages for invalid URLs, restricted videos, and missing dependencies |
 | 🔎 **Auto ffmpeg Detection** | Automatically finds ffmpeg on common Windows install paths — no PATH setup needed |
+| �️ **One-Click Desktop Launch** | Batch scripts for instant setup and launch — no terminal knowledge needed |
 
 ---
 
-## 📸 Screenshot
-
-<div align="center">
-<img src="assets/screenshot.png" alt="YouTube Downloader Screenshot" width="700"/>
-</div>
-
----
-
-## 🚀 Quick Start
+## 🚀 Quick Start (One-Click Setup)
 
 ### Prerequisites
 
-- **Python 3.10+**
-- **ffmpeg** — required for MP3 conversion and merging video+audio streams
-  - [Download ffmpeg](https://ffmpeg.org/download.html) and either add it to your PATH or place it in `C:\ffmpeg\bin\`
+- **Python 3.10+** — [Download](https://python.org) (check "Add Python to PATH" during install)
+- **ffmpeg** — [Download](https://ffmpeg.org/download.html) and extract to `C:\ffmpeg\` (auto-detected)
 
-### Installation
+### Step 1 — Install
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/youtube-downloader.git
-cd youtube-downloader
+Double-click **`install_env.bat`**. It will:
+- ✅ Check Python is installed
+- ✅ Create a virtual environment (`venv/`)
+- ✅ Install all dependencies automatically
 
-# Install dependencies
-pip install -r requirements.txt
+### Step 2 — Launch
 
-# Run the app
-streamlit run app.py
-```
+Double-click **`run_app.bat`**. The app opens in your default browser at **http://localhost:8501**.
 
-The app will open in your browser at **http://localhost:8501**.
+> [!TIP]
+> Create a Desktop Shortcut for `run_app.bat` so you can launch the app like any other program — see [Desktop Shortcut](#-desktop-shortcut) below.
 
 ---
 
@@ -70,6 +60,37 @@ The app will open in your browser at **http://localhost:8501**.
    - 🎥 **Video (MP4)** — select your preferred resolution from the dropdown
 4. **Click** "Start Download" and watch the progress bar
 5. **Save** the file using the download button that appears
+
+---
+
+## 🖥️ Desktop Shortcut
+
+Turn `run_app.bat` into a professional-looking desktop app:
+
+### Create the Shortcut
+
+1. Open the project folder in File Explorer
+2. **Right-click** `run_app.bat` → **Send to** → **Desktop (create shortcut)**
+3. A shortcut named *"run_app.bat - Shortcut"* appears on your Desktop
+
+### Rename & Set Icon
+
+4. **Right-click** the shortcut on your Desktop → **Properties**
+5. In the **General** tab, rename it to **YouTube Downloader**
+6. Click **Change Icon…** → **Browse…**
+7. Navigate to the project's `assets\app_icon.ico` and select it
+8. Click **OK** → **Apply** → **OK**
+
+> [!NOTE]
+> A custom `.ico` file is included at `assets/app_icon.ico`. You can replace it with any `.ico` file you prefer.
+
+### Optional: Minimize Console Window
+
+To hide the black console window when launching:
+
+4. **Right-click** the shortcut → **Properties**
+5. Set **Run** to **Minimized**
+6. Click **Apply** → **OK**
 
 ---
 
@@ -86,7 +107,12 @@ The app will open in your browser at **http://localhost:8501**.
 ```
 youtube-downloader/
 ├── app.py              # Main Streamlit application
+├── install_env.bat     # One-click environment setup
+├── run_app.bat         # One-click app launcher
 ├── requirements.txt    # Python dependencies
+├── generate_icon.py    # Icon generator utility
+├── assets/
+│   └── app_icon.ico    # Desktop shortcut icon
 ├── .gitignore          # Git ignore rules
 ├── LICENSE             # MIT License
 └── README.md           # This file
@@ -94,7 +120,7 @@ youtube-downloader/
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ ffmpeg Auto-Detection
 
 The app automatically detects ffmpeg in these locations (Windows):
 

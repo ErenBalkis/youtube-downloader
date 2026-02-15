@@ -29,5 +29,8 @@ desktop.ini
 # Temporary download files
 ytdl_*/
 
+# Generated icon cache (keep assets/app_icon.ico in repo)
+__pycache__/
+
 # Streamlit
 .streamlit/secrets.toml
